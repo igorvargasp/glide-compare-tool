@@ -57,6 +57,8 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        "column-old": "hsl(var(--column-old))",
+        "column-new": "hsl(var(--column-new))",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -87,5 +89,5 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 } satisfies Config;
