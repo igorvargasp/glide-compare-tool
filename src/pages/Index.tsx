@@ -1,4 +1,6 @@
 import ToolchainColumn from "@/components/ToolchainColumn";
+import LessonCard from "@/components/LessonCard";
+import { lessonSections } from "@/data/lessonSections";
 
 const oldToolchainContent = `### Build System
 - **Webpack 4** with custom config
@@ -27,39 +29,12 @@ npm run build  # ~90s on CI
 \`\`\`
 `;
 
-const newToolchainContent = `### Build System
-- **Vite 5** with zero-config
-- SWC transpilation
-- Native ESM, no loaders needed
-
-### Package Manager
-- \`bun\` with \`bun.lockb\`
-- Blazing installs (~3s)
-
-### Testing
-- Vitest + Testing Library
-- \`@playwright/test\` for E2E
-
-### Linting
-- ESLint flat config (\`eslint.config.js\`)
-- Prettier integrated via plugin
-
-### Dev Server
-- Vite native dev server
-- HMR via **React SWC plugin**
-- Cold start: **~300ms**
-
-\`\`\`bash
-bun run build  # ~8s on CI
-\`\`\`
-`;
-
 const Index = () => {
   return (
     <div className="min-h-screen bg-background p-6 md:p-10">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <h1 className="text-2xl md:text-3xl font-mono font-bold text-foreground mb-2 tracking-tight">
-          Toolchain Comparison
+          Farmers Market Math: Sort, Price, and Play
         </h1>
         <p className="text-muted-foreground font-mono text-sm mb-8">
           Side-by-side view of migration changes
@@ -71,11 +46,26 @@ const Index = () => {
             content={oldToolchainContent}
             variant="old"
           />
-          <ToolchainColumn
-            title="New Toolchain"
-            content={newToolchainContent}
-            variant="new"
-          />
+
+          <div className="flex flex-col">
+            <div className="flex items-center gap-2 px-5 py-3 border border-column-new/30 rounded-t-lg bg-card border-b-0">
+              <span className="inline-block w-2 h-2 rounded-full bg-column-new" />
+              <h2 className="text-sm font-mono font-semibold tracking-wider uppercase text-column-new">
+                New Toolchain
+              </h2>
+            </div>
+            <div className="flex flex-col gap-2 p-3 border border-column-new/30 rounded-b-lg bg-card/50">
+              {lessonSections.map((section, index) => (
+                <LessonCard
+                  key={index}
+                  title={section.title}
+                  content={section.content}
+                  duration={section.duration}
+                  defaultOpen={section.defaultOpen}
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>
