@@ -2,6 +2,7 @@ import ToolchainColumn from "@/components/ToolchainColumn";
 import LessonCard from "@/components/LessonCard";
 import { lessonSections } from "@/data/lessonSections";
 import { weatherLessonSections } from "@/data/weatherLessonSections";
+import { playgroundLessonSections } from "@/data/playgroundLessonSections";
 
 const oldToolchainContent = `### Build System
 - **Webpack 4** with custom config
