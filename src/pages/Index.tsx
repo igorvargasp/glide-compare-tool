@@ -1,6 +1,7 @@
 import ToolchainColumn from "@/components/ToolchainColumn";
 import LessonCard from "@/components/LessonCard";
 import { lessonSections } from "@/data/lessonSections";
+import { weatherLessonSections } from "@/data/weatherLessonSections";
 
 const oldToolchainContent = `### Build System
 - **Webpack 4** with custom config
@@ -55,9 +56,20 @@ const Index = () => {
               </h2>
             </div>
             <div className="flex flex-col gap-2 p-3 border border-column-new/30 rounded-b-lg bg-card/50">
+              <h3 className="text-xs font-mono font-semibold uppercase tracking-wider text-muted-foreground px-2 pt-2">Farmers Market Math</h3>
               {lessonSections.map((section, index) => (
                 <LessonCard
-                  key={index}
+                  key={`farm-${index}`}
+                  title={section.title}
+                  content={section.content}
+                  duration={section.duration}
+                  defaultOpen={section.defaultOpen}
+                />
+              ))}
+              <h3 className="text-xs font-mono font-semibold uppercase tracking-wider text-muted-foreground px-2 pt-4">Weather Reporters</h3>
+              {weatherLessonSections.map((section, index) => (
+                <LessonCard
+                  key={`weather-${index}`}
                   title={section.title}
                   content={section.content}
                   duration={section.duration}
