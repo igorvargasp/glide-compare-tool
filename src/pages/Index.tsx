@@ -3,6 +3,7 @@ import LessonCard from "@/components/LessonCard";
 import { lessonSections } from "@/data/lessonSections";
 import { weatherLessonSections } from "@/data/weatherLessonSections";
 import { playgroundLessonSections } from "@/data/playgroundLessonSections";
+import { boardGameLessonSections } from "@/data/boardGameLessonSections";
 
 const oldToolchainContent = `### Build System
 - **Webpack 4** with custom config
@@ -81,6 +82,16 @@ const Index = () => {
               {playgroundLessonSections.map((section, index) => (
                 <LessonCard
                   key={`playground-${index}`}
+                  title={section.title}
+                  content={section.content}
+                  duration={section.duration}
+                  defaultOpen={section.defaultOpen}
+                />
+              ))}
+              <h3 className="text-xs font-mono font-semibold uppercase tracking-wider text-muted-foreground px-2 pt-4">Design & Play: Board Game</h3>
+              {boardGameLessonSections.map((section, index) => (
+                <LessonCard
+                  key={`boardgame-${index}`}
                   title={section.title}
                   content={section.content}
                   duration={section.duration}
