@@ -1,6 +1,7 @@
 import ToolchainColumn from "@/components/ToolchainColumn";
 import LessonCard from "@/components/LessonCard";
 import { lessonSections } from "@/data/lessonSections";
+import { weatherLessonSections } from "@/data/weatherLessonSections";
 
 const oldToolchainContent = `### Build System
 - **Webpack 4** with custom config
