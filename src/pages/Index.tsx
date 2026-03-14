@@ -2,6 +2,7 @@ import ToolchainColumn from "@/components/ToolchainColumn";
 import LessonCard from "@/components/LessonCard";
 import { lessonSections } from "@/data/lessonSections";
 import { weatherLessonSections } from "@/data/weatherLessonSections";
+import { playgroundLessonSections } from "@/data/playgroundLessonSections";
 
 const oldToolchainContent = `### Build System
 - **Webpack 4** with custom config
@@ -70,6 +71,16 @@ const Index = () => {
               {weatherLessonSections.map((section, index) => (
                 <LessonCard
                   key={`weather-${index}`}
+                  title={section.title}
+                  content={section.content}
+                  duration={section.duration}
+                  defaultOpen={section.defaultOpen}
+                />
+              ))}
+              <h3 className="text-xs font-mono font-semibold uppercase tracking-wider text-muted-foreground px-2 pt-4">Design a Dream Playground</h3>
+              {playgroundLessonSections.map((section, index) => (
+                <LessonCard
+                  key={`playground-${index}`}
                   title={section.title}
                   content={section.content}
                   duration={section.duration}
