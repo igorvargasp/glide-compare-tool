@@ -4,6 +4,7 @@ import { lessonSections } from "@/data/lessonSections";
 import { weatherLessonSections } from "@/data/weatherLessonSections";
 import { playgroundLessonSections } from "@/data/playgroundLessonSections";
 import { boardGameLessonSections } from "@/data/boardGameLessonSections";
+import { gardenLessonSections } from "@/data/gardenLessonSections";
 
 const oldToolchainContent = `### Build System
 - **Webpack 4** with custom config
@@ -92,6 +93,16 @@ const Index = () => {
               {boardGameLessonSections.map((section, index) => (
                 <LessonCard
                   key={`boardgame-${index}`}
+                  title={section.title}
+                  content={section.content}
+                  duration={section.duration}
+                  defaultOpen={section.defaultOpen}
+                />
+              ))}
+              <h3 className="text-xs font-mono font-semibold uppercase tracking-wider text-muted-foreground px-2 pt-4">Garden Detectives</h3>
+              {gardenLessonSections.map((section, index) => (
+                <LessonCard
+                  key={`garden-${index}`}
                   title={section.title}
                   content={section.content}
                   duration={section.duration}
