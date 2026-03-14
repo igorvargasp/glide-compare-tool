@@ -77,6 +77,16 @@ const Index = () => {
                   defaultOpen={section.defaultOpen}
                 />
               ))}
+              <h3 className="text-xs font-mono font-semibold uppercase tracking-wider text-muted-foreground px-2 pt-4">Design a Dream Playground</h3>
+              {playgroundLessonSections.map((section, index) => (
+                <LessonCard
+                  key={`playground-${index}`}
+                  title={section.title}
+                  content={section.content}
+                  duration={section.duration}
+                  defaultOpen={section.defaultOpen}
+                />
+              ))}
             </div>
           </div>
         </div>
