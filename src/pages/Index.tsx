@@ -110,6 +110,16 @@ const Index = () => {
                   defaultOpen={section.defaultOpen}
                 />
               ))}
+              <h3 className="text-xs font-mono font-semibold uppercase tracking-wider text-muted-foreground px-2 pt-4">Plan a 3-Minute Podcast</h3>
+              {podcastLessonSections.map((section, index) => (
+                <LessonCard
+                  key={`podcast-${index}`}
+                  title={section.title}
+                  content={section.content}
+                  duration={section.duration}
+                  defaultOpen={section.defaultOpen}
+                />
+              ))}
             </div>
           </div>
         </div>
