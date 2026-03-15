@@ -6,6 +6,7 @@ import { playgroundLessonSections } from "@/data/playgroundLessonSections";
 import { boardGameLessonSections } from "@/data/boardGameLessonSections";
 import { gardenLessonSections } from "@/data/gardenLessonSections";
 import { podcastLessonSections } from "@/data/podcastLessonSections";
+import { snackShopLessonSections } from "@/data/snackShopLessonSections";
 
 const oldToolchainContent = `### Build System
 - **Webpack 4** with custom config
@@ -114,6 +115,16 @@ const Index = () => {
               {podcastLessonSections.map((section, index) => (
                 <LessonCard
                   key={`podcast-${index}`}
+                  title={section.title}
+                  content={section.content}
+                  duration={section.duration}
+                  defaultOpen={section.defaultOpen}
+                />
+              ))}
+              <h3 className="text-xs font-mono font-semibold uppercase tracking-wider text-muted-foreground px-2 pt-4">After-School Snack Shop</h3>
+              {snackShopLessonSections.map((section, index) => (
+                <LessonCard
+                  key={`snackshop-${index}`}
                   title={section.title}
                   content={section.content}
                   duration={section.duration}
