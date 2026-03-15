@@ -5,6 +5,7 @@ import { weatherLessonSections } from "@/data/weatherLessonSections";
 import { playgroundLessonSections } from "@/data/playgroundLessonSections";
 import { boardGameLessonSections } from "@/data/boardGameLessonSections";
 import { gardenLessonSections } from "@/data/gardenLessonSections";
+import { podcastLessonSections } from "@/data/podcastLessonSections";
 
 const oldToolchainContent = `### Build System
 - **Webpack 4** with custom config
