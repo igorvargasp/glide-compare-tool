@@ -8,6 +8,7 @@ import { podcastLessonSections } from "@/data/podcastLessonSections";
 import { snackShopLessonSections } from "@/data/snackShopLessonSections";
 import { farmersMarketLessonSections } from "@/data/farmersMarketLessonSections";
 import { oldWeatherLessonSections } from "@/data/oldWeatherLessonSections";
+import { oldPlaygroundLessonSections } from "@/data/oldPlaygroundLessonSections";
 
 const Index = () => {
   return (
@@ -43,6 +44,16 @@ const Index = () => {
               {oldWeatherLessonSections.map((section, index) => (
                 <LessonCard
                   key={`old-weather-${index}`}
+                  title={section.title}
+                  content={section.content}
+                  duration={section.duration}
+                  defaultOpen={section.defaultOpen}
+                />
+              ))}
+              <h3 className="text-xs font-mono font-semibold uppercase tracking-wider text-muted-foreground px-2 pt-4">Dream Playground Design</h3>
+              {oldPlaygroundLessonSections.map((section, index) => (
+                <LessonCard
+                  key={`old-playground-${index}`}
                   title={section.title}
                   content={section.content}
                   duration={section.duration}
