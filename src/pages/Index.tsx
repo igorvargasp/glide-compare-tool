@@ -9,6 +9,13 @@ import { snackShopLessonSections } from "@/data/snackShopLessonSections";
 import { farmersMarketLessonSections } from "@/data/farmersMarketLessonSections";
 import { oldWeatherLessonSections } from "@/data/oldWeatherLessonSections";
 import { oldPlaygroundLessonSections } from "@/data/oldPlaygroundLessonSections";
+import { oldBoardGameLessonSections } from "@/data/oldBoardGameLessonSections";
+import { oldGardenLessonSections } from "@/data/oldGardenLessonSections";
+import { oldPodcastLessonSections } from "@/data/oldPodcastLessonSections";
+import { oldSnackShopLessonSections } from "@/data/oldSnackShopLessonSections";
+import { oldCommunityArtLessonSections } from "@/data/oldCommunityArtLessonSections";
+import { oldBridgeLessonSections } from "@/data/oldBridgeLessonSections";
+import { bridgeLessonSections } from "@/data/bridgeLessonSections";
 
 const Index = () => {
   return (
@@ -54,6 +61,56 @@ const Index = () => {
               {oldPlaygroundLessonSections.map((section, index) => (
                 <LessonCard
                   key={`old-playground-${index}`}
+                  title={section.title}
+                  content={section.content}
+                  duration={section.duration}
+                  defaultOpen={section.defaultOpen}
+                />
+              ))}
+              <h3 className="text-xs font-mono font-semibold uppercase tracking-wider text-muted-foreground px-2 pt-4">60-Minute Board Game Designers</h3>
+              {oldBoardGameLessonSections.map((section, index) => (
+                <LessonCard
+                  key={`old-boardgame-${index}`}
+                  title={section.title}
+                  content={section.content}
+                  duration={section.duration}
+                  defaultOpen={section.defaultOpen}
+                />
+              ))}
+              <h3 className="text-xs font-mono font-semibold uppercase tracking-wider text-muted-foreground px-2 pt-4">Save Our School Garden!</h3>
+              {oldGardenLessonSections.map((section, index) => (
+                <LessonCard
+                  key={`old-garden-${index}`}
+                  title={section.title}
+                  content={section.content}
+                  duration={section.duration}
+                  defaultOpen={section.defaultOpen}
+                />
+              ))}
+              <h3 className="text-xs font-mono font-semibold uppercase tracking-wider text-muted-foreground px-2 pt-4">Podcast Planning: Speak Up</h3>
+              {oldPodcastLessonSections.map((section, index) => (
+                <LessonCard
+                  key={`old-podcast-${index}`}
+                  title={section.title}
+                  content={section.content}
+                  duration={section.duration}
+                  defaultOpen={section.defaultOpen}
+                />
+              ))}
+              <h3 className="text-xs font-mono font-semibold uppercase tracking-wider text-muted-foreground px-2 pt-4">Snack Shop Simulation</h3>
+              {oldSnackShopLessonSections.map((section, index) => (
+                <LessonCard
+                  key={`old-snackshop-${index}`}
+                  title={section.title}
+                  content={section.content}
+                  duration={section.duration}
+                  defaultOpen={section.defaultOpen}
+                />
+              ))}
+              <h3 className="text-xs font-mono font-semibold uppercase tracking-wider text-muted-foreground px-2 pt-4">Build a Strong Bridge</h3>
+              {oldBridgeLessonSections.map((section, index) => (
+                <LessonCard
+                  key={`old-bridge-${index}`}
                   title={section.title}
                   content={section.content}
                   duration={section.duration}
@@ -135,6 +192,16 @@ const Index = () => {
               {snackShopLessonSections.map((section, index) => (
                 <LessonCard
                   key={`snackshop-${index}`}
+                  title={section.title}
+                  content={section.content}
+                  duration={section.duration}
+                  defaultOpen={section.defaultOpen}
+                />
+              ))}
+              <h3 className="text-xs font-mono font-semibold uppercase tracking-wider text-muted-foreground px-2 pt-4">Bridge Builders</h3>
+              {bridgeLessonSections.map((section, index) => (
+                <LessonCard
+                  key={`bridge-${index}`}
                   title={section.title}
                   content={section.content}
                   duration={section.duration}
