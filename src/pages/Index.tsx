@@ -84,11 +84,7 @@ const lessonPairs: LessonPair[] = [
     newSections: snackShopLessonSections,
     newKey: "snackshop",
   },
-  {
-    oldTitle: "Community Art With Recycled Materials",
-    oldSections: oldCommunityArtLessonSections,
-    oldKey: "old-communityart",
-  },
+
   {
     oldTitle: "Build a Strong Bridge",
     oldSections: oldBridgeLessonSections,
