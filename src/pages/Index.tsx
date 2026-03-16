@@ -8,6 +8,7 @@ import { podcastLessonSections } from "@/data/podcastLessonSections";
 import { snackShopLessonSections } from "@/data/snackShopLessonSections";
 import { farmersMarketLessonSections } from "@/data/farmersMarketLessonSections";
 import { oldWeatherLessonSections } from "@/data/oldWeatherLessonSections";
+import { oldPlaygroundLessonSections } from "@/data/oldPlaygroundLessonSections";
 
 const Index = () => {
   return (
